@@ -10,19 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private let configurationLabel = UILabel()
+    private let configurationManager = ConfigurationManager()
+    private let urlButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configurationLabel.text = Bundle.main.infoDictionary!["Configuration"] as? String
-        view.addSubview(configurationLabel)
+        let environmentValue = configurationManager.environmentType.rawValue
+        urlButton.setTitle("Open \(environmentValue) URL", for: .normal)
+        urlButton.setTitleColor(.blue, for: .normal)
+        urlButton.addTarget(self, action: #selector(didTapUrlButton(_:)), for: .touchUpInside)
+        view.addSubview(urlButton)
+    }
+    
+    func didTapUrlButton(_ sender: UIButton) {
+        guard let url = configurationManager.environmentType.serverURL() else { return }
+        let message = "URL is: \(url.absoluteString)"
+        let alert = UIAlertController(title: "Button Tap", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in }))
+        present(alert, animated: true)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        configurationLabel.sizeToFit()
-        configurationLabel.center = view.center
+        urlButton.frame.size = CGSize(width: 250, height: 60)
+        urlButton.center = view.center
     }
 }

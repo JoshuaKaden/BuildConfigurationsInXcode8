@@ -12,6 +12,8 @@
 		93472A761F30C72B00F7FB0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93472A741F30C72B00F7FB0B /* Main.storyboard */; };
 		93472A781F30C72B00F7FB0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93472A771F30C72B00F7FB0B /* Assets.xcassets */; };
 		93472A7B1F30C72B00F7FB0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93472A791F30C72B00F7FB0B /* LaunchScreen.storyboard */; };
+		937F3FA71F34D43900CFE192 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F3FA61F34D43900CFE192 /* ConfigurationManager.swift */; };
+		937F3FA91F34D6B200CFE192 /* EnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F3FA81F34D6B200CFE192 /* EnvironmentType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		93472A771F30C72B00F7FB0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93472A7A1F30C72B00F7FB0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93472A7C1F30C72B00F7FB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		937F3FA61F34D43900CFE192 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
+		937F3FA81F34D6B200CFE192 /* EnvironmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				93472A701F30C72B00F7FB0B /* AppDelegate.swift */,
-				93472A721F30C72B00F7FB0B /* ViewController.swift */,
-				93472A741F30C72B00F7FB0B /* Main.storyboard */,
 				93472A771F30C72B00F7FB0B /* Assets.xcassets */,
-				93472A791F30C72B00F7FB0B /* LaunchScreen.storyboard */,
+				937F3FA61F34D43900CFE192 /* ConfigurationManager.swift */,
+				937F3FA81F34D6B200CFE192 /* EnvironmentType.swift */,
 				93472A7C1F30C72B00F7FB0B /* Info.plist */,
+				93472A791F30C72B00F7FB0B /* LaunchScreen.storyboard */,
+				93472A741F30C72B00F7FB0B /* Main.storyboard */,
+				93472A721F30C72B00F7FB0B /* ViewController.swift */,
 			);
 			path = BuildConfiguratonsInXcode8;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			files = (
 				93472A731F30C72B00F7FB0B /* ViewController.swift in Sources */,
 				93472A711F30C72B00F7FB0B /* AppDelegate.swift in Sources */,
+				937F3FA71F34D43900CFE192 /* ConfigurationManager.swift in Sources */,
+				937F3FA91F34D6B200CFE192 /* EnvironmentType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +199,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENVIRONMENT_TYPE = Development;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -255,6 +264,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENVIRONMENT_TYPE = Development;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -312,6 +322,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENVIRONMENT_TYPE = Testing;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -376,6 +387,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENVIRONMENT_TYPE = Testing;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -433,6 +445,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENVIRONMENT_TYPE = Staging;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -497,6 +510,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENVIRONMENT_TYPE = Staging;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -554,6 +568,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENVIRONMENT_TYPE = Production;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -618,6 +633,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENVIRONMENT_TYPE = Production;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
