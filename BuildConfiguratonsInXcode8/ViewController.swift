@@ -10,18 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private var configuratonValue = (Bundle.main.infoDictionary!["Configuration"] as? String) ?? ""
-    private let configurationLabel = UILabel()
-    
-    private var environmentValue = (Bundle.main.infoDictionary!["Environment Type"] as? String) ?? ""
+    private let configurationManager = ConfigurationManager()
     private var environmentLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configurationLabel.text = "Configuration: \(configuratonValue)"
-        view.addSubview(configurationLabel)
-        
+        let environmentValue = configurationManager.environmentType.rawValue
         environmentLabel.text = "Environment Type: \(environmentValue)"
         view.addSubview(environmentLabel)
     }
@@ -29,10 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        configurationLabel.sizeToFit()
-        configurationLabel.center = view.center
-        
         environmentLabel.sizeToFit()
-        environmentLabel.frame.origin = CGPoint(x: configurationLabel.frame.origin.x, y: configurationLabel.frame.origin.y + configurationLabel.frame.size.height + 8)
+        environmentLabel.center = view.center
     }
 }
