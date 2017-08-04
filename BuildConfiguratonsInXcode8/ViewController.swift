@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     private var configuratonValue = (Bundle.main.infoDictionary!["Configuration"] as? String) ?? ""
     private let configurationLabel = UILabel()
     
-    private var environmentValue = (Bundle.main.infoDictionary!["ENVIRONMENT_TYPE"] as? String) ?? ""
+    private var environmentValue = (Bundle.main.infoDictionary!["Environment Type"] as? String) ?? ""
     private var environmentLabel = UILabel()
     
     override func viewDidLoad() {
